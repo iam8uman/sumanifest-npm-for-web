@@ -13,7 +13,7 @@ importers:
         version: 6.0.4(@babel/core@7.25.2)(rollup@4.21.3)
       '@rollup/plugin-typescript':
         specifier: ^11.1.6
-        version: 11.1.6(rollup@4.21.3)(typescript@5.6.2)
+        version: 11.1.6(rollup@4.21.3)(tslib@2.7.0)(typescript@5.6.2)
       '@types/react':
         specifier: ^18.3.7
         version: 18.3.7
@@ -29,6 +29,9 @@ importers:
       rollup:
         specifier: ^4.21.3
         version: 4.21.3
+      tslib:
+        specifier: ^2.7.0
+        version: 2.7.0
 
 packages:
 
@@ -404,6 +407,9 @@ packages:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
 
+  tslib@2.7.0:
+    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
+
   typescript@5.6.2:
     resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
     engines: {node: '>=14.17'}
@@ -564,13 +570,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@rollup/plugin-typescript@11.1.6(rollup@4.21.3)(typescript@5.6.2)':
+  '@rollup/plugin-typescript@11.1.6(rollup@4.21.3)(tslib@2.7.0)(typescript@5.6.2)':
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.21.3)
       resolve: 1.22.8
       typescript: 5.6.2
     optionalDependencies:
       rollup: 4.21.3
+      tslib: 2.7.0
 
   '@rollup/pluginutils@5.1.0(rollup@4.21.3)':
     dependencies:
@@ -776,6 +783,8 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   to-fast-properties@2.0.0: {}
+
+  tslib@2.7.0: {}
 
   typescript@5.6.2: {}
 
