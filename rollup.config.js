@@ -5,7 +5,7 @@ export default {
     format: 'esm',
     name: 'rayoneclaw',
   },
-  external: ['react', 'react-dom'],
+  external: ['react', 'react-dom','localforage'],
   plugins: [
     require('@rollup/plugin-typescript')(),
     require('@rollup/plugin-babel')({
