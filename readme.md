@@ -52,7 +52,7 @@ A versatile hook for fetching data with built-in caching and error handling.
 #### Usage
 
 ```jsx
-import { useDataFetch } from '@sumanifest/useDataFetch';
+import { useDataFetch } from 'sumanifest';
 
 function MyComponent() {
   const { data, isLoading, error, refetch } = useDataFetch('https://api.example.com/data');
@@ -76,7 +76,7 @@ A hook for handling paginated data fetching.
 #### Usage
 
 ```jsx
-import { usePaginatedFetch } from '@sumanifest/usePaginatedFetch';
+import { usePaginatedFetch } from 'sumanifest';
 
 function PaginatedList() {
   const { data, isLoading, error, page, goToNextPage, goToPreviousPage } = usePaginatedFetch(
@@ -104,7 +104,7 @@ A hook for implementing infinite scrolling functionality.
 #### Usage
 
 ```jsx
-import { useInfiniteScroll } from '@sumanifest/useInfiniteScroll';
+import { useInfiniteScroll } from 'sumanifest';
 
 function InfiniteList() {
   const { data, isLoading, error, loadMore } = useInfiniteScroll('https://api.example.com/items');
@@ -127,7 +127,7 @@ A hook for performing data mutations (create, update, delete operations).
 #### Usage
 
 ```jsx
-import { useDataMutation } from '@sumanifest/useDataMutation';
+import { useDataMutation } from 'sumanifest';
 
 function CreateItemForm() {
   const { mutate, isLoading, error } = useDataMutation();
@@ -160,7 +160,7 @@ A hook that allows cancellation of ongoing fetch requests.
 #### Usage
 
 ```jsx
-import { useCancellableFetch } from '@sumanifest/useCancellableFetch';
+import { useCancellableFetch } from 'sumanifest';
 
 function CancellableDataFetch() {
   const { data, isLoading, error } = useCancellableFetch('https://api.example.com/data');
@@ -179,7 +179,7 @@ A hook for implementing polling (periodic data fetching).
 #### Usage
 
 ```jsx
-import { usePolling } from '@sumanifest/usePolling';
+import { usePolling } from 'sumanifest';
 
 function PollingComponent() {
   const { data, isLoading, error, startPolling, stopPolling } = usePolling('https://api.example.com/data', 5000);
@@ -203,7 +203,7 @@ A hook that provides offline support using local storage.
 #### Usage
 
 ```jsx
-import { useOfflineFetch } from '@sumanifest/useOfflineFetch';
+import { useOfflineFetch } from 'sumanifest';
 
 function OfflineAwareComponent() {
   const { data, isLoading, error } = useOfflineFetch('https://api.example.com/data');
@@ -222,7 +222,7 @@ A hook for making GraphQL queries.
 #### Usage
 
 ```jsx
-import { useGraphQLQuery } from '@sumanifest/useGraphQLQuery';
+import { useGraphQLQuery } from 'sumanifest';
 
 function GraphQLComponent() {
   const { data, isLoading, error } = useGraphQLQuery('https://api.example.com/graphql', {
@@ -252,7 +252,7 @@ A hook for real-time data fetching using WebSockets.
 #### Usage
 
 ```jsx
-import { useWebSocket } from '@sumanifest/useWebSocket';
+import { useWebSocket } from 'sumanifest';
 
 function WebSocketComponent() {
   const { data, isConnected, error, sendMessage } = useWebSocket('wss://api.example.com/ws');
@@ -275,7 +275,7 @@ A hook for easily storing and retrieving data from localStorage with TypeScript 
 #### Usage
 
 ```jsx
-import { useLocalStorage } from '@your-org/advanced-data-fetching';
+import { useLocalStorage } from 'sumanifest';
 
 function LocalStorageComponent() {
   const [user, setUser] = useLocalStorage('user', { name: '', email: '' });
@@ -311,7 +311,7 @@ This package includes a set of reusable TypeScript types to enhance your develop
 ### Basic Types
 
 ```typescript
-import { ID, BaseEntity } from '@your-org/advanced-data-fetching';
+import { ID, BaseEntity } from 'sumanifest';
 
 const id: ID = '123'; // or 123
 const entity: BaseEntity = {
@@ -324,7 +324,7 @@ const entity: BaseEntity = {
 ### User Types
 
 ```typescript
-import { User } from '@your-org/advanced-data-fetching';
+import { User } from 'sumanifest';
 
 const user: User = {
   id: '1',
@@ -339,7 +339,7 @@ const user: User = {
 ### API Response Types
 
 ```typescript
-import { ApiResponse, PaginatedResponse } from '@your-org/advanced-data-fetching';
+import { ApiResponse, PaginatedResponse } from 'sumanifest';
 
 const response: ApiResponse = {
   data: user,
@@ -360,7 +360,7 @@ const paginatedResponse: PaginatedResponse = {
 ### Form Types
 
 ```typescript
-import { FormState } from '@your-org/advanced-data-fetching';
+import { FormState } from 'sumanifest';
 
 const formState: FormState = {
   values: user,
@@ -372,7 +372,7 @@ const formState: FormState = {
 ### Utility Types
 
 ```typescript
-import { Nullable, DeepPartial, AsyncFunction } from '@your-org/advanced-data-fetching';
+import { Nullable, DeepPartial, AsyncFunction } from 'sumanifest';
 
 const nullableUser: Nullable = null;
 const partialUser: DeepPartial = { username: 'johndoe' };
@@ -382,7 +382,7 @@ const asyncFunc: AsyncFunction = async () => user;
 These types can be used throughout your application to ensure type safety and improve developer productivity.
 
 ```javascript
-import { RequestQueue } from '@sumanifest/RequestQueue';
+import { RequestQueue } from 'sumanifest';
 
 async function fetchWithQueue() {
   const queue = new RequestQueue(2); // Allow 2 concurrent requests
@@ -414,7 +414,7 @@ A utility for implementing rate limiting on API requests.
 #### Usage
 
 ```javascript
-import { rateLimiter } from '@sumanifest/rateLimiter';
+import { rateLimiter } from 'sumanifest';
 
 const limitedFetch = rateLimiter(5, 1000); // 5 requests per second
 
@@ -436,7 +436,7 @@ A utility for automatically retrying failed requests with exponential backoff.
 #### Usage
 
 ```javascript
-import { retryFetch } from '@sumanifest/retryFetch';
+import { retryFetch } from 'sumanifest';
 
 async function fetchWithRetry() {
   try {
@@ -456,7 +456,7 @@ A utility for avoiding duplicate requests for the same data.
 #### Usage
 
 ```javascript
-import { deduplicateFetch } from '@sumanifest/deduplicateFetch';
+import { deduplicateFetch } from 'sumanifest';
 
 async function fetchData() {
   const response1 = await deduplicateFetch('https://api.example.com/data');
@@ -472,7 +472,7 @@ A utility for normalizing nested API responses.
 #### Usage
 
 ```javascript
-import { normalizeData } from '@sumanifest/normalizeData';
+import { normalizeData } from 'sumanifest';
 
 const apiResponse = [
   { id: 1, name: 'John' },
@@ -491,7 +491,7 @@ A utility for adding request and response interceptors.
 #### Usage
 
 ```javascript
-import { interceptedFetch, addRequestInterceptor, addResponseInterceptor } from '@sumanifest';
+import { interceptedFetch, addRequestInterceptor, addResponseInterceptor } from 'sumanifest';
 
 addRequestInterceptor((config) => {
   config.headers = { ...config.headers, 'Authorization': 'Bearer token' };
@@ -515,7 +515,7 @@ async function fetchData() {
 For server-side rendering support in Next.js applications, use the `ssrDataFetch` function:
 
 ```javascript
-import { ssrDataFetch } from '@sumanifest/advanced-data-fetching';
+import { ssrDataFetch } from 'sumanifest';
 
 export async function getServerSideProps() {
   const data = await ssrDataFetch('https://api.example.com/data');
@@ -555,7 +555,7 @@ yarn add @sumanifest/useDataFetch
 Here's a basic example of how to use the `useDataFetch` hook:
 
 ```javascriptreact
-import { useDataFetch } from '@sumanifest/useDataFetch';
+import { useDataFetch } from 'sumanifest';
 
 function MyComponent() {
   const { data, isLoading, error } = useDataFetch('https://api.example.com/data');
@@ -572,7 +572,7 @@ function MyComponent() {
 You can easily include query parameters in your requests:
 
 ```javascriptreact
-import { useDataFetch } from '@sumanifest/useDataFetch';
+import { useDataFetch } from 'sumanifest';
 
 function SearchComponent() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -593,7 +593,7 @@ function SearchComponent() {
 Here's how you can make a POST request:
 
 ```javascriptreact
-import { useDataFetch } from '@sumanifest/useDataFetch';
+import { useDataFetch } from 'sumanifest';
 
 function CreatePostComponent() {
   const { data, isLoading, error, updateOptions } = useDataFetch('https://api.example.com/posts');
@@ -614,7 +614,7 @@ function CreatePostComponent() {
 You can update the fetch options dynamically:
 
 ```javascriptreact
-import { useDataFetch } from '@sumanifest/useDataFetch';
+import { useDataFetch } from 'sumanifest';
 
 function DynamicFetchComponent() {
   const { data, isLoading, error, updateOptions } = useDataFetch('https://api.example.com/data');
