@@ -1,6 +1,6 @@
 {
-  "name": "rayoneclaw",
-  "version": "1.0.1",
+  "name": "sumanifest",
+  "version": "2.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,5 +22,8 @@
     "react-dom": "^18.3.1",
     "rollup": "^4.21.3",
     "tslib": "^2.7.0"
+  },
+  "dependencies": {
+    "localforage": "^1.10.0"
   }
 }
